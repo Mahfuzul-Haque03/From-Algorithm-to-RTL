@@ -2,24 +2,24 @@
 
 This repository contains artifacts accompanying the paper:
 
-**From Algorithm to RTL**
+**From Algorithm to RTL: A Comparative Study of Compiler-Driven and LLM-Driven FPGA Design Flows**
 
 If you are new to this repository, start by reading the paper PDF in:
 
-- `Paper/From Algotithm to RTL.pdf`
+- `Paper/From Algotithm to RTL.pdf` (filename in repo)
 
 The repo includes MLIR/CIRCT/Calyx lowering intermediates, generated SystemVerilog, and FPGA synthesis/implementation reports used in the paper experiments.
 
 ## Paper
 
-- Title: **From Algorithm to RTL**
-- PDF: `Paper/From Algotithm to RTL.pdf`
+- Title: **From Algorithm to RTL: A Comparative Study of Compiler-Driven and LLM-Driven FPGA Design Flows**
+- PDF file: `Paper/From Algotithm to RTL.pdf`
 - Recommended: read the paper first, then use this repository to inspect and reproduce the reported artifacts and hardware results.
 
 ## Repository Contents
 
 - `Paper/`
-  - PDF of the paper (`From Algotithm to RTL.pdf`).
+  - PDF of the paper **From Algorithm to RTL: A Comparative Study of Compiler-Driven and LLM-Driven FPGA Design Flows** (`From Algotithm to RTL.pdf`).
 - `Relu/`, `GeLU/`, `FFNN/`
   - End-to-end lowering artifacts:
     - `Input/*.mlir` (+ some Python source files)
