@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Feb  6 01:04:51 2026
+| Host         : dell-PT-3620 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_utilization -hierarchical -file reports/util_synth_hier.rpt
+| Design       : gemm
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|          Instance         |           Module          | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| gemm                      |                     (top) |        270 |        270 |       0 |    0 | 147 |      0 |      0 |          3 |
+|   (gemm)                  |                     (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   cond_reg                |   std_reg__parameterized2 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   cond_reg0               | std_reg__parameterized2_0 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   cond_reg1               | std_reg__parameterized2_1 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   for_0_induction_var_reg |                   std_reg |          1 |          1 |       0 |    0 |  11 |      0 |      0 |          0 |
+|   for_1_induction_var_reg |                 std_reg_2 |          0 |          0 |       0 |    0 |  11 |      0 |      0 |          0 |
+|   for_2_induction_var_reg |                 std_reg_3 |          0 |          0 |       0 |    0 |  11 |      0 |      0 |          0 |
+|   fsm                     |   std_reg__parameterized3 |         67 |         67 |       0 |    0 |   2 |      0 |      0 |          0 |
+|   fsm0                    |   std_reg__parameterized4 |        155 |        155 |       0 |    0 |   5 |      0 |      0 |          0 |
+|   idx                     |   std_reg__parameterized1 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|   idx0                    | std_reg__parameterized1_4 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|   idx1                    | std_reg__parameterized1_5 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|   load_0_reg              |                 std_reg_6 |          0 |          0 |       0 |    0 |  33 |      0 |      0 |          0 |
+|   muli_0_reg              |   std_reg__parameterized0 |          0 |          0 |       0 |    0 |  32 |      0 |      0 |          0 |
+|   signal_reg              | std_reg__parameterized2_7 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   std_add_3               |   std_add__parameterized0 |         32 |         32 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   std_add_7               |                   std_add |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   std_mult_pipe_0         |             std_mult_pipe |          0 |          0 |       0 |    0 |  17 |      0 |      0 |          3 |
+|     comp                  |          std_fp_mult_pipe |          0 |          0 |       0 |    0 |  17 |      0 |      0 |          3 |
++---------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

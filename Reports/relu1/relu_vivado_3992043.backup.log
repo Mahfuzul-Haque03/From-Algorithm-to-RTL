@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Feb  6 07:35:58 2026
+# Process ID: 3992043
+# Current directory: /home/mahfuz/vivado_run
+# Command line: vivado -mode batch -source scripts/run_gemm_main_zynq7020.tcl -log reports/relu_vivado.log -journal reports/relu_vivado.jou
+# Log file: /home/mahfuz/vivado_run/reports/relu_vivado.log
+# Journal file: /home/mahfuz/vivado_run/reports/relu_vivado.jou
+# Running On: dell-PT-3620, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 4, Host memory: 33541 MB
+#-----------------------------------------------------------
+source scripts/run_gemm_main_zynq7020.tcl
+# file mkdir reports
+# set PART   "xc7z020clg484-1"
+# set TOP    "main"
+# set DESIGN "relu"
+# set RTL_FILES [list \
+#   "$::env(HOME)/ReadySv/Relu/Output/relu.sv" \
+# ]
+# puts "Using TOP=$TOP PART=$PART"
+Using TOP=main PART=xc7z020clg484-1
+# puts "RTL_FILES=$RTL_FILES"
+RTL_FILES=/home/mahfuz/ReadySv/Relu/Output/relu.sv
+# read_verilog -sv $RTL_FILES
+# synth_design -top $TOP -part $PART
+Command: synth_design -top main -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3992110
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2902.426 ; gain = 0.000 ; free physical = 2844 ; free virtual = 22098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/mahfuz/ReadySv/Relu/Output/relu.sv:2272]
+ERROR: [Synth 8-27] string type not supported [/home/mahfuz/ReadySv/Relu/Output/relu.sv:2279]
+ERROR: [Synth 8-6156] failed synthesizing module 'main' [/home/mahfuz/ReadySv/Relu/Output/relu.sv:2272]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2902.426 ; gain = 0.000 ; free physical = 3569 ; free virtual = 22822
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+6 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  6 07:36:11 2026...

@@ -1,0 +1,1043 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Feb  6 01:04:11 2026
+# Process ID: 3939839
+# Current directory: /home/mahfuz/vivado_run
+# Command line: vivado -mode batch -source scripts/run_main_zynq7020_no_xdc.tcl -log reports/vivado.log -journal reports/vivado.jou
+# Log file: /home/mahfuz/vivado_run/reports/vivado.log
+# Journal file: /home/mahfuz/vivado_run/reports/vivado.jou
+# Running On: dell-PT-3620, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 4, Host memory: 33541 MB
+#-----------------------------------------------------------
+source scripts/run_main_zynq7020_no_xdc.tcl
+# file mkdir reports
+# set PART "xc7z020clg484-1"
+# set TOP  "gemm"
+# set RTL_FILES [list \
+#   "$::env(HOME)/ReadySv/Gemm/Output/gemm.sv" \
+# ]
+# puts "RTL_FILES = $RTL_FILES"
+RTL_FILES = /home/mahfuz/ReadySv/Gemm/Output/gemm.sv
+# read_verilog -sv $RTL_FILES
+# synth_design -rtl -top $TOP -part $PART
+Command: synth_design -rtl -top gemm -part xc7z020clg484-1
+Starting synth_design
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2903.418 ; gain = 0.000 ; free physical = 4169 ; free virtual = 22891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'gemm' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1569]
+INFO: [Synth 8-6157] synthesizing module 'std_slice' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+INFO: [Synth 8-6157] synthesizing module 'std_add' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_lsh' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1295]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_lsh' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'std_slice__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+	Parameter IN_WIDTH bound to: 65 - type: integer 
+	Parameter OUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_signext' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 64 - type: integer 
+	Parameter OUT_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_signext__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_reg' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_mult_pipe' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:366]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'std_fp_mult_pipe' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:27]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter INT_WIDTH bound to: 64 - type: integer 
+	Parameter FRAC_WIDTH bound to: 0 - type: integer 
+	Parameter SIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_fp_mult_pipe' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'std_mult_pipe' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:366]
+INFO: [Synth 8-6157] synthesizing module 'std_signext__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized2' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized2' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_lt' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:912]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_lt' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:912]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized3' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized3' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized2' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized2' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'undef' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1259]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'undef' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1259]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized4' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized4' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_wire' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1276]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_wire' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1276]
+INFO: [Synth 8-6155] done synthesizing module 'gemm' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1569]
+WARNING: [Synth 8-3848] Net arg_mem_1_write_data in module/entity gemm does not have driver. [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1583]
+WARNING: [Synth 8-3848] Net arg_mem_0_write_data in module/entity gemm does not have driver. [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1589]
+WARNING: [Synth 8-3917] design gemm has port arg_mem_1_write_en driven by constant 0
+WARNING: [Synth 8-3917] design gemm has port arg_mem_0_write_en driven by constant 0
+WARNING: [Synth 8-7129] Port in[64] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[63] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[62] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[61] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[60] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[59] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[58] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[57] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[56] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[55] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[54] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[53] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[52] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[51] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[50] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[49] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[48] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[47] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[46] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[45] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[44] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[43] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[42] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[41] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[40] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[39] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[38] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[37] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[36] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[35] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[34] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[33] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[32] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[31] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[30] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[29] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[28] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[27] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[26] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[25] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[24] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[23] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[22] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[21] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[20] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[19] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[18] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[17] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[16] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[15] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[14] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[13] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[12] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[11] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[10] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[31] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[30] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[29] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[28] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[27] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[26] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[25] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[24] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[23] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[22] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[21] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[20] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[19] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[18] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[17] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[16] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[15] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[14] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[13] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[12] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[11] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[10] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[9] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[8] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[7] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[6] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[5] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[4] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[3] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[2] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[1] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[0] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[31] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[30] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[29] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[28] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[27] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[26] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[25] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[24] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[23] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[22] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[21] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[20] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[19] in module gemm is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2903.418 ; gain = 0.000 ; free physical = 4013 ; free virtual = 22736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2903.418 ; gain = 0.000 ; free physical = 4013 ; free virtual = 22736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2903.418 ; gain = 0.000 ; free physical = 4013 ; free virtual = 22736
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2903.418 ; gain = 0.000 ; free physical = 4013 ; free virtual = 22736
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 4013 ; free virtual = 22735
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2967.418 ; gain = 64.000 ; free physical = 4013 ; free virtual = 22735
+50 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2967.418 ; gain = 64.031 ; free physical = 4013 ; free virtual = 22735
+# set fp [open "reports/ports.rpt" "w"]
+# puts $fp "Ports found:"
+# puts $fp [join [lsort [get_ports]] "\n"]
+# close $fp
+# reset_run synth_1
+# synth_design -top $TOP -part $PART
+Command: synth_design -top gemm -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 2698 ; free virtual = 21424
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'gemm' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1569]
+INFO: [Synth 8-6157] synthesizing module 'std_slice' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+INFO: [Synth 8-6157] synthesizing module 'std_add' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_lsh' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1295]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_lsh' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'std_slice__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+	Parameter IN_WIDTH bound to: 65 - type: integer 
+	Parameter OUT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:786]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_signext' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 64 - type: integer 
+	Parameter OUT_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_signext__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 65 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_reg' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized0' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized0' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_mult_pipe' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:366]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'std_fp_mult_pipe' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:27]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter INT_WIDTH bound to: 64 - type: integer 
+	Parameter FRAC_WIDTH bound to: 0 - type: integer 
+	Parameter SIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_fp_mult_pipe' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'std_mult_pipe' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:366]
+INFO: [Synth 8-6157] synthesizing module 'std_signext__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+	Parameter IN_WIDTH bound to: 32 - type: integer 
+	Parameter OUT_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_signext__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:745]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized2' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized2' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized1' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized1' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'std_lt' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:912]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_lt' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:912]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized3' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized3' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized2' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized2' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1285]
+INFO: [Synth 8-6157] synthesizing module 'undef' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1259]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'undef' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1259]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized4' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+	Parameter WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized4' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1305]
+INFO: [Synth 8-6157] synthesizing module 'std_wire' [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1276]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_wire' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1276]
+INFO: [Synth 8-6155] done synthesizing module 'gemm' (0#1) [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1569]
+WARNING: [Synth 8-3848] Net arg_mem_1_write_data in module/entity gemm does not have driver. [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1583]
+WARNING: [Synth 8-3848] Net arg_mem_0_write_data in module/entity gemm does not have driver. [/home/mahfuz/ReadySv/Gemm/Output/gemm.sv:1589]
+WARNING: [Synth 8-3917] design gemm has port arg_mem_1_write_en driven by constant 0
+WARNING: [Synth 8-3917] design gemm has port arg_mem_0_write_en driven by constant 0
+WARNING: [Synth 8-7129] Port in[64] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[63] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[62] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[61] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[60] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[59] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[58] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[57] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[56] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[55] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[54] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[53] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[52] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[51] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[50] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[49] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[48] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[47] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[46] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[45] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[44] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[43] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[42] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[41] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[40] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[39] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[38] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[37] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[36] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[35] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[34] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[33] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[32] in module std_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[31] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[30] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[29] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[28] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[27] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[26] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[25] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[24] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[23] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[22] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[21] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[20] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[19] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[18] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[17] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[16] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[15] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[14] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[13] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[12] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[11] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in[10] in module std_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[31] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[30] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[29] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[28] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[27] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[26] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[25] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[24] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[23] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[22] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[21] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[20] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[19] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[18] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[17] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[16] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[15] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[14] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[13] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[12] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[11] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[10] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[9] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[8] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[7] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[6] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[5] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[4] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[3] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[2] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[1] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_1_write_data[0] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[31] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[30] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[29] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[28] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[27] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[26] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[25] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[24] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[23] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[22] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[21] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[20] in module gemm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arg_mem_0_write_data[19] in module gemm is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 3663 ; free virtual = 22389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 3663 ; free virtual = 22389
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 3663 ; free virtual = 22389
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2967.418 ; gain = 0.000 ; free physical = 3663 ; free virtual = 22389
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3065.262 ; gain = 0.000 ; free physical = 3662 ; free virtual = 22389
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3065.262 ; gain = 0.000 ; free physical = 3662 ; free virtual = 22389
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3816 ; free virtual = 22542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3820 ; free virtual = 22547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3820 ; free virtual = 22547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3823 ; free virtual = 22550
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'beg_spl_bb0_11_done' (std_wire) to 'bb0_18_done'
+INFO: [Synth 8-223] decloning instance 'invoke0_done' (std_wire) to 'invoke8_done'
+INFO: [Synth 8-223] decloning instance 'invoke1_done' (std_wire) to 'invoke7_done'
+INFO: [Synth 8-223] decloning instance 'invoke2_done' (std_wire) to 'invoke6_done'
+INFO: [Synth 8-223] decloning instance 'init_repeat_done' (std_wire) to 'incr_repeat_done'
+INFO: [Synth 8-223] decloning instance 'init_repeat0_done' (std_wire) to 'incr_repeat0_done'
+INFO: [Synth 8-223] decloning instance 'init_repeat1_done' (std_wire) to 'incr_repeat1_done'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   65 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Multipliers : 
+	              64x64  Multipliers := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 9     
+	   2 Input    6 Bit        Muxes := 3     
+	  20 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: PCIN+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: PCIN+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: PCIN+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp0, operation Mode is: PCIN+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: register std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp0.
+DSP Report: Generating DSP std_mult_pipe_0/comp/out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: register std_mult_pipe_0/comp/out_tmp_reg is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+DSP Report: operator std_mult_pipe_0/comp/out_tmp0 is absorbed into DSP std_mult_pipe_0/comp/out_tmp_reg.
+WARNING: [Synth 8-3917] design gemm has port arg_mem_1_write_en driven by constant 0
+WARNING: [Synth 8-3917] design gemm has port arg_mem_0_write_en driven by constant 0
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[47]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[46]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[45]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[44]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[43]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[42]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[41]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[40]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[39]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[38]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[37]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[36]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[35]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[34]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[33]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[32]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[31]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[30]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[29]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[28]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[27]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[26]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[25]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[24]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[23]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[22]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[21]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[20]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[19]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[18]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[17]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[16]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[15]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[14]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[13]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[12]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[11]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[10]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[9]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[8]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[7]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[6]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[5]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[4]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[3]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[2]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[1]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[0]) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[47]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[46]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[45]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[44]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[43]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[42]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[41]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[40]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[39]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[38]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[37]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[36]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[35]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[34]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[33]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[32]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[31]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[30]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[29]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[28]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[27]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[26]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[25]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[24]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[23]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[22]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[21]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[20]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[19]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[18]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[17]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[16]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[15]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[14]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[13]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[12]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[11]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[10]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[9]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[8]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[7]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[6]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[5]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[4]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[3]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[2]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[1]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[0]__0) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[47]__1) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[46]__1) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[45]__1) is unused and will be removed from module gemm.
+WARNING: [Synth 8-3332] Sequential element (std_mult_pipe_0/comp/out_tmp_reg[44]__1) is unused and will be removed from module gemm.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3887 ; free virtual = 22619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gemm        | A2*B2            | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | PCIN+A2*B2       | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 14     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|gemm        | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | PCIN+A2*B2       | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN+A2*B2)'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|gemm        | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN+A2*B2)'    | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|gemm        | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN>>17)+A2*B2 | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3937 ; free virtual = 22668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3936 ; free virtual = 22667
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3913 ; free virtual = 22645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gemm        | A'*B'         | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | PCIN>>17+A*B' | 0      | 17     | -      | -      | 0      | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gemm        | (PCIN+A'*B')' | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    20|
+|3     |DSP48E1 |     3|
+|5     |LUT1    |     1|
+|6     |LUT2    |    46|
+|7     |LUT3    |    16|
+|8     |LUT4    |    83|
+|9     |LUT5    |    49|
+|10    |LUT6    |   100|
+|11    |FDRE    |   147|
+|12    |IBUF    |   102|
+|13    |OBUF    |    69|
+|14    |OBUFT   |    64|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 3976 ; free virtual = 22708
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 323 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3065.262 ; gain = 0.000 ; free physical = 4024 ; free virtual = 22756
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 4024 ; free virtual = 22756
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3065.262 ; gain = 0.000 ; free physical = 4129 ; free virtual = 22860
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3065.262 ; gain = 0.000 ; free physical = 4101 ; free virtual = 22833
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ce75bfe3
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 207 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 3065.262 ; gain = 97.844 ; free physical = 4250 ; free virtual = 22982
+# write_checkpoint -force reports/post_synth.dcp
+INFO: [Common 17-1381] The checkpoint '/home/mahfuz/vivado_run/reports/post_synth.dcp' has been generated.
+# report_utilization -hierarchical -file reports/util_synth_hier.rpt
+# report_utilization               -file reports/util_synth.rpt
+# report_timing_summary            -file reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.61 . Memory (MB): peak = 3263.953 ; gain = 85.812 ; free physical = 3979 ; free virtual = 22711
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 133ce9a09
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3263.953 ; gain = 0.000 ; free physical = 3979 ; free virtual = 22711
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter fsm0/arg_mem_0_content_en_OBUF_inst_i_1 into driver instance fsm0/arg_mem_0_content_en_OBUF_inst_i_2, which resulted in an inversion of 62 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1613b5fc6
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1613b5fc6
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15ae1977c
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15ae1977c
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 15ae1977c
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 15ae1977c
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+Ending Logic Optimization Task | Checksum: 13d3bfaf8
+
+Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 13d3bfaf8
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 13d3bfaf8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+Ending Netlist Obfuscation Task | Checksum: 13d3bfaf8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3427.938 ; gain = 0.000 ; free physical = 3797 ; free virtual = 22529
+INFO: [Common 17-83] Releasing license: Implementation
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3806 ; free virtual = 22538
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f7e38ed5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3806 ; free virtual = 22538
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3806 ; free virtual = 22538
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (234) is greater than number of available sites (200).
+The following are banks with available pins: 
+Resolution: Consider using Xilinx part with greater number of IO pins
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 33 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 35 |    50 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   200 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9bd2557d
+
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3817 ; free virtual = 22549
+Phase 1 Placer Initialization | Checksum: 9bd2557d
+
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3817 ; free virtual = 22549
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 9bd2557d
+
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3459.953 ; gain = 0.000 ; free physical = 3817 ; free virtual = 22549
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Fri Feb  6 01:04:57 2026...
