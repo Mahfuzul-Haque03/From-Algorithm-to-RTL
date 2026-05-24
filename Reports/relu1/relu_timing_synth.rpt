@@ -1,0 +1,456 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Feb  6 07:41:50 2026
+| Host         : dell-PT-3620 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_timing_summary -file reports/relu_timing_synth.rpt
+| Design       : main
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There is 1 input port with no input delay but user has a false path constraint. (MEDIUM)
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    -20.498    -1905.798                   5922                58678        0.151        0.000                      0                58678        4.500        0.000                       0                 38937  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk               -20.498    -1905.798                   5922                58678        0.151        0.000                      0                58678        4.500        0.000                       0                 38937  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :         5922  Failing Endpoints,  Worst Slack      -20.498ns,  Total Violation    -1905.798ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.151ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -20.498ns  (required time - arrival time)
+  Source:                 forward_instance/fsm0/out_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            forward_instance/std_addFN_0/out_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        30.362ns  (logic 13.045ns (42.965%)  route 17.317ns (57.035%))
+  Logic Levels:           52  (CARRY4=26 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT5=6 LUT6=13)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.078ns = ( 12.078 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.406ns
+    Clock Pessimism Removal (CPR):    0.183ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.921     0.921 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     1.721    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.101     1.822 r  clk_IBUF_BUFG_inst/O
+                         net (fo=38936, unplaced)     0.584     2.406    forward_instance/fsm0/clk_IBUF_BUFG
+                         FDRE                                         r  forward_instance/fsm0/out_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.478     2.884 r  forward_instance/fsm0/out_reg[0]/Q
+                         net (fo=17, unplaced)        0.526     3.410    forward_instance/fsm0/out_reg[0]_2[0]
+                         LUT2 (Prop_lut2_I0_O)        0.295     3.705 r  forward_instance/fsm0/mem[299][31]_i_7__0/O
+                         net (fo=22, unplaced)        0.511     4.216    forward_instance/fsm0/mem[299][31]_i_7__0_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     4.340 r  forward_instance/fsm0/out[31]_i_3/O
+                         net (fo=301, unplaced)       0.576     4.916    forward_instance/fsm0/done_reg_3
+                         LUT2 (Prop_lut2_I0_O)        0.124     5.040 r  forward_instance/fsm0/close_sSigSum_carry_i_45/O
+                         net (fo=1, unplaced)         0.333     5.373    forward_instance/fsm0/std_addFN_0/convert_r/p_0_in[0]
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     5.968 r  forward_instance/fsm0/close_sSigSum_carry_i_39/CO[3]
+                         net (fo=1, unplaced)         0.009     5.977    forward_instance/fsm0/close_sSigSum_carry_i_39_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  forward_instance/fsm0/sDiffExps_carry_i_42/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    forward_instance/fsm0/sDiffExps_carry_i_42_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     6.431 f  forward_instance/fsm0/close_sSigSum_carry_i_40/O[1]
+                         net (fo=2, unplaced)         0.622     7.053    mem_1/sDiffExps_carry_i_38_0[1]
+                         LUT5 (Prop_lut5_I0_O)        0.306     7.359 f  mem_1/sDiffExps_carry_i_43/O
+                         net (fo=2, unplaced)         0.913     8.272    mem_1/sDiffExps_carry_i_43_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.396 f  mem_1/sDiffExps_carry__1_i_10/O
+                         net (fo=1, unplaced)         0.902     9.298    mem_1/sDiffExps_carry__1_i_10_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.124     9.422 r  mem_1/sDiffExps_carry__1_i_6/O
+                         net (fo=3, unplaced)         0.467     9.889    mem_1/sDiffExps_carry__1_i_6_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124    10.013 r  mem_1/out[31]_i_11/O
+                         net (fo=2, unplaced)         0.460    10.473    mem_1/out[31]_i_11_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    10.597 r  mem_1/sDiffExps_carry__0_i_16/O
+                         net (fo=5, unplaced)         0.477    11.074    mem_0/out_reg[31]_2
+                         LUT3 (Prop_lut3_I2_O)        0.124    11.198 r  mem_0/sDiffExps_carry__0_i_6/O
+                         net (fo=1, unplaced)         0.000    11.198    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_21_0[2]
+                         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380    11.578 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/sDiffExps_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    11.578    forward_instance/std_addFN_0/adder/addRecFNToRaw/sDiffExps_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.179    11.757 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/sDiffExps_carry__1/CO[1]
+                         net (fo=114, unplaced)       0.415    12.172    mem_0/CO[0]
+                         LUT6 (Prop_lut6_I4_O)        0.332    12.504 f  mem_0/close_sSigSum_carry_i_13/O
+                         net (fo=3, unplaced)         0.467    12.971    mem_1/close_sSigSum_carry
+                         LUT4 (Prop_lut4_I3_O)        0.124    13.095 r  mem_1/close_sSigSum_carry_i_3/O
+                         net (fo=1, unplaced)         0.639    13.734    forward_instance/std_addFN_0/adder/addRecFNToRaw/DI[0]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520    14.254 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/close_sSigSum_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    14.263    forward_instance/std_addFN_0/adder/addRecFNToRaw/close_sSigSum_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    14.594 f  forward_instance/std_addFN_0/adder/addRecFNToRaw/close_sSigSum_carry__0/O[3]
+                         net (fo=6, unplaced)         0.650    15.244    forward_instance/std_addFN_0/adder/addRecFNToRaw/close_sSigSum_carry__0_n_4
+                         LUT1 (Prop_lut1_I0_O)        0.307    15.551 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_92/O
+                         net (fo=1, unplaced)         0.000    15.551    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_92_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376    15.927 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_60/CO[3]
+                         net (fo=1, unplaced)         0.000    15.927    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_60_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    16.044 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__1_i_26/CO[3]
+                         net (fo=1, unplaced)         0.000    16.044    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__1_i_26_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    16.161 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__1_i_27/CO[3]
+                         net (fo=1, unplaced)         0.000    16.161    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__1_i_27_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    16.278 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_61/CO[3]
+                         net (fo=1, unplaced)         0.000    16.278    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_61_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    16.609 f  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_62/O[3]
+                         net (fo=2, unplaced)         0.432    17.041    forward_instance/std_addFN_0/adder/addRecFNToRaw/close_sigSum0[24]
+                         LUT5 (Prop_lut5_I4_O)        0.307    17.348 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_63/O
+                         net (fo=1, unplaced)         0.333    17.681    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_63_n_0
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595    18.276 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_32/CO[3]
+                         net (fo=1, unplaced)         0.009    18.285    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_32_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256    18.541 f  forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry__0_i_11/O[2]
+                         net (fo=1, unplaced)         0.452    18.993    forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry__0_i_11_n_5
+                         LUT6 (Prop_lut6_I0_O)        0.301    19.294 f  forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry_i_19/O
+                         net (fo=3, unplaced)         0.920    20.214    forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry_i_19_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    20.338 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry_i_12/O
+                         net (fo=38, unplaced)        1.186    21.524    forward_instance/std_addFN_0/adder/addRecFNToRaw/common_sExpOut_carry_i_12_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    21.648 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__4_i_13/O
+                         net (fo=2, unplaced)         0.913    22.561    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__4_i_13_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    22.685 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__4_i_5/O
+                         net (fo=4, unplaced)         0.473    23.158    forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry__4_i_5_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124    23.282 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_6/O
+                         net (fo=48, unplaced)        0.530    23.812    forward_instance/std_addFN_0/adder/addRecFNToRaw/out_sig[26]
+                         LUT5 (Prop_lut5_I0_O)        0.124    23.936 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/roundedSig1_carry_i_1/O
+                         net (fo=1, unplaced)         0.333    24.269    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[1]_i_5
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595    24.864 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    24.873    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    24.990 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    24.990    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    25.107 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    25.107    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    25.224 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000    25.224    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    25.341 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000    25.341    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__3_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    25.672 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/roundedSig1_carry__4/O[3]
+                         net (fo=1, unplaced)         0.618    26.290    forward_instance/std_addFN_0/adder/addRecFNToRaw/sRoundedExp_carry_0[3]
+                         LUT4 (Prop_lut4_I1_O)        0.307    26.597 r  forward_instance/std_addFN_0/adder/addRecFNToRaw/sRoundedExp_carry_i_2/O
+                         net (fo=1, unplaced)         0.000    26.597    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out_reg[26][0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    27.110 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/sRoundedExp_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    27.119    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/sRoundedExp_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    27.450 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/sRoundedExp_carry__0/O[3]
+                         net (fo=4, unplaced)         0.445    27.895    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/sRoundedExp_carry__0_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.307    28.202 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry_i_1/O
+                         net (fo=1, unplaced)         0.333    28.535    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry_i_1_n_0
+                         CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595    29.130 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry/CO[3]
+                         net (fo=1, unplaced)         0.009    29.139    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    29.256 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000    29.256    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry__0_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    29.373 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000    29.373    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry__1_n_0
+                         CARRY4 (Prop_carry4_CI_CO[2])
+                                                      0.252    29.625 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/common_overflow_carry__2/CO[2]
+                         net (fo=6, unplaced)         0.484    30.109    mem_0/out_reg[30]_1[0]
+                         LUT6 (Prop_lut6_I5_O)        0.310    30.419 r  mem_0/out[22]_i_15/O
+                         net (fo=1, unplaced)         0.449    30.868    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[6]_i_4_1
+                         LUT6 (Prop_lut6_I2_O)        0.124    30.992 f  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[22]_i_11/O
+                         net (fo=5, unplaced)         0.477    31.469    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[22]_i_11_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    31.593 f  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[20]_i_5/O
+                         net (fo=3, unplaced)         0.467    32.060    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[20]_i_5_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    32.184 f  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[16]_i_2/O
+                         net (fo=2, unplaced)         0.460    32.644    forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[16]_i_2_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124    32.768 r  forward_instance/std_addFN_0/adder/roundRawOut/roundAnyRawFNToRecFN/out[15]_i_1/O
+                         net (fo=1, unplaced)         0.000    32.768    forward_instance/std_addFN_0/res_std[15]
+                         FDRE                                         r  forward_instance/std_addFN_0/out_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.788    10.788 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    11.548    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    11.639 r  clk_IBUF_BUFG_inst/O
+                         net (fo=38936, unplaced)     0.439    12.078    forward_instance/std_addFN_0/clk_IBUF_BUFG
+                         FDRE                                         r  forward_instance/std_addFN_0/out_reg[15]/C
+                         clock pessimism              0.183    12.261    
+                         clock uncertainty           -0.035    12.226    
+                         FDRE (Setup_fdre_C_D)        0.044    12.270    forward_instance/std_addFN_0/out_reg[15]
+  -------------------------------------------------------------------
+                         required time                         12.270    
+                         arrival time                         -32.768    
+  -------------------------------------------------------------------
+                         slack                                -20.498    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 forward_instance/fsm/out_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            forward_instance/fsm/out_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.395ns  (logic 0.245ns (61.950%)  route 0.150ns (38.050%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.982ns
+    Source Clock Delay      (SCD):    0.628ns
+    Clock Pessimism Removal (CPR):    0.209ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.151     0.151 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.337     0.488    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.026     0.514 r  clk_IBUF_BUFG_inst/O
+                         net (fo=38936, unplaced)     0.114     0.628    forward_instance/fsm/clk_IBUF_BUFG
+                         FDRE                                         r  forward_instance/fsm/out_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.147     0.775 f  forward_instance/fsm/out_reg[3]/Q
+                         net (fo=11, unplaced)        0.150     0.925    forward_instance/fsm/out_reg[3]_1[1]
+                         LUT4 (Prop_lut4_I3_O)        0.098     1.023 r  forward_instance/fsm/out[2]_i_1__10/O
+                         net (fo=1, unplaced)         0.000     1.023    forward_instance/fsm/out[2]_i_1__10_n_0
+                         FDRE                                         r  forward_instance/fsm/out_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+                         IBUF (Prop_ibuf_I_O)         0.339     0.339 r  clk_IBUF_inst/O
+                         net (fo=1, unplaced)         0.355     0.694    clk_IBUF
+                         BUFG (Prop_bufg_I_O)         0.029     0.723 r  clk_IBUF_BUFG_inst/O
+                         net (fo=38936, unplaced)     0.259     0.982    forward_instance/fsm/clk_IBUF_BUFG
+                         FDRE                                         r  forward_instance/fsm/out_reg[2]/C
+                         clock pessimism             -0.209     0.773    
+                         FDRE (Hold_fdre_C_D)         0.099     0.872    forward_instance/fsm/out_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.872    
+                         arrival time                           1.023    
+  -------------------------------------------------------------------
+                         slack                                  0.151    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         10.000      6.116                forward_instance/relu4d_0_instance/std_mult_pipe_5/comp/out0/CLK
+Low Pulse Width   Slow    FDRE/C       n/a            0.500         5.000       4.500                forward_instance/addf_0_reg/done_reg/C
+High Pulse Width  Slow    FDRE/C       n/a            0.500         5.000       4.500                forward_instance/addf_0_reg/done_reg/C
+
+
+

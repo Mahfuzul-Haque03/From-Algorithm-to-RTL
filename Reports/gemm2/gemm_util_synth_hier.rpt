@@ -1,0 +1,46 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Feb  6 06:25:47 2026
+| Host         : dell-PT-3620 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_utilization -hierarchical -file reports/gemm_util_synth_hier.rpt
+| Design       : main
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|           Instance          |           Module          | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| main                        |                     (top) |         64 |         64 |       0 |    0 |  39 |      0 |      0 |          0 |
+|   (main)                    |                     (top) |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|   gemm_instance             |                      gemm |         64 |         64 |       0 |    0 |  36 |      0 |      0 |          0 |
+|     cond_reg                |   std_reg__parameterized2 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     cond_reg0               | std_reg__parameterized2_2 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     cond_reg1               | std_reg__parameterized2_3 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     for_0_induction_var_reg |                   std_reg |          1 |          1 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     for_1_induction_var_reg |                 std_reg_4 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     for_2_induction_var_reg |                 std_reg_5 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     fsm                     |   std_reg__parameterized3 |          2 |          2 |       0 |    0 |   2 |      0 |      0 |          0 |
+|     fsm0                    |   std_reg__parameterized4 |         46 |         46 |       0 |    0 |   5 |      0 |      0 |          0 |
+|     idx                     |   std_reg__parameterized1 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|     idx0                    | std_reg__parameterized1_6 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|     idx1                    | std_reg__parameterized1_7 |          5 |          5 |       0 |    0 |   7 |      0 |      0 |          0 |
+|     load_0_reg              |                 std_reg_8 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|     signal_reg              | std_reg__parameterized2_9 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   mem_0                     |                seq_mem_d1 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   mem_1                     |              seq_mem_d1_0 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   mem_2                     |              seq_mem_d1_1 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
++-----------------------------+---------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

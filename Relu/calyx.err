@@ -1,0 +1,11 @@
+[WARN  papercut] 4.relu.futil
+    117 |    group bb0_6 {
+        |    ^^^^^^^^^^^^^ [Papercut] Required signal not driven inside the group. When writing to the port `arg_mem_0.write_en', the ports [arg_mem_0.write_data] must also be written to. The primitive type `seq_mem_d1' specifies this using a @write_together spec.
+[WARN  papercut] 4.relu.futil
+    359 |    group bb0_6 {
+        |    ^^^^^^^^^^^^^ [Papercut] Required signal not driven inside the group. When writing to the port `arg_mem_0.write_en', the ports [arg_mem_0.write_data] must also be written to. The primitive type `seq_mem_d1' specifies this using a @write_together spec.
+[WARN  papercut] 4.relu.futil
+    396 |    group bb0_13 {
+        |    ^^^^^^^^^^^^^^ [Papercut] Required signal not driven inside the group. When writing to the port `arg_mem_1.write_en', the ports [arg_mem_1.write_data] must also be written to. The primitive type `seq_mem_d1' specifies this using a @write_together spec.
+[WARN  morty] Pickle might be non-functional as some files can be excluded due to use of --top=main.
+    	This might lead to required components being excluded. Use at your own risk!!!
